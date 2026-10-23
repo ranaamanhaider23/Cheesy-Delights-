@@ -53,3 +53,22 @@ resetView.addEventListener('click', () => {
   if (!foodModel.hasAttribute('src')) { toast('Upload a 3D food model first.'); return; }
   foodModel.cameraOrbit = '0deg 75deg 105%'; foodModel.fieldOfView = 'auto'; foodModel.jumpCameraToGoal();
 });
+
+
+// Products created in the local admin panel (same browser only in this static build).
+(function renderAdminProducts(){
+  let products=[]; try { products=JSON.parse(localStorage.getItem('cd_admin_products_v1')||'[]'); } catch(e) {}
+  const grid=document.querySelector('.menu-grid'); if(!grid || !products.length) return;
+  const map={'Burgers':'burger','Pizza':'pizza','Pasta':'pasta','Sandwiches':'sandwich','Rolls & Platters':'roll','Fries & Appetizers':'appetizer','Wings':'wings','Drinks':'drink','Party Deals':'all','Other':'all'};
+  products.forEach(p=>{
+    const card=document.createElement('article'); card.className='menu-card admin-added-card'; card.dataset.category=map[p.category]||'all'; card.dataset.productId=p.id;
+    const head=document.createElement('div'); head.className='card-head';
+    const icon=document.createElement('span'); icon.textContent='🍽️'; head.append(icon);
+    const title=document.createElement('h3'); title.textContent=p.name; head.append(title); card.append(head);
+    if(p.image){const img=document.createElement('img');img.src=p.image;img.alt=p.name;img.loading='lazy';img.style.cssText='width:100%;max-height:210px;object-fit:cover;border-radius:5px;margin:4px 0 10px';card.append(img)}
+    const desc=document.createElement('p'); desc.textContent=p.description||''; desc.style.cssText='font-size:12px;color:#c7bca7';card.append(desc);
+    const price=document.createElement('p'); price.style.cssText='color:#ffcf70;font-weight:800'; price.textContent='Rs. '+Number(p.price).toLocaleString('en-PK')+(p.oldPrice?'  (Old Rs. '+Number(p.oldPrice).toLocaleString('en-PK')+')':'');card.append(price);
+    const viewer=document.createElement('details');viewer.style.cssText='margin-top:8px;border:1px solid #65451b;border-radius:5px;padding:8px';const summary=document.createElement('summary');summary.textContent='View food in 360°';summary.style.cssText='cursor:pointer;color:#ffcf70;font-size:12px;font-weight:800';viewer.append(summary);const mv=document.createElement('model-viewer');mv.src=p.model;mv.alt='360 degree '+p.name;mv.setAttribute('camera-controls','');mv.setAttribute('touch-action','pan-y');mv.setAttribute('shadow-intensity','1');mv.style.cssText='width:100%;height:260px;background:#100c07';viewer.append(mv);card.append(viewer);
+    const order=document.createElement('a');order.className='order-link';order.target='_blank';order.rel='noopener';order.href='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent('Hi ChessyDelights, I want to order '+p.name+' for Rs. '+p.price);order.textContent='Order on WhatsApp ↗';card.append(order);grid.append(card);
+  });
+})();
