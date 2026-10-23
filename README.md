@@ -1,31 +1,28 @@
-# ChessyDelights — Digital Agency + Food Website
+# ChessyDelights — Food-only website
 
-A responsive black/neon-blue/purple website for two sides of ChessyDelights:
-- Digital marketing agency: AR experiences, 3D product viewer, and creative campaigns
-- Food business: burger, pasta, and party-deal enquiry cards with WhatsApp links
-- Responsive mobile and desktop layout
-- Interactive sample 3D model and AR support on compatible devices
-- QR code generator for the live website URL
-- Contact form that drafts an email using `mailto:`
+A responsive food menu website with WhatsApp ordering, category filters, QR codes, party deals, and an interactive 360° 3D viewer shell.
 
-## Quick start
-1. Unzip the package.
-2. Open `index.html` in a browser, or use a local server.
-3. Internet access is needed for Google Fonts, the sample 3D model, and QR library.
+## 360° viewer: important asset requirement
+The viewer uses Google's `<model-viewer>` web component. It supports mouse drag and mobile touch drag, zoom and orbit controls, but **actual food 3D model files are not included**. The viewer is not pretending that a rotating emoji/photo is real 3D.
 
-## Contact details configured
-- Email: ranaamanhaider23@gmail.com
-- WhatsApp link: 923184789902 (international format used in links)
+### Test a model on your device
+1. Open the site in a modern browser with internet access.
+2. Scroll to **Explore in 360°**.
+3. Choose a food category, then tap **Upload a 3D food model**.
+4. Select a genuine `.glb` or `.gltf` model. Drag on the viewer to rotate it.
 
-## Before publishing
-- Replace sample concept cards with real portfolio work and approved images.
-- Confirm your food menu, current prices, service details, delivery area, and business hours.
-- The food section currently invites customers to ask for the menu/prices on WhatsApp; it does not claim unconfirmed prices.
-- The contact form opens the visitor's email app; to collect submissions directly on the site, connect a form backend.
-- Publish the website on HTTPS before sharing its QR code; a QR generated from a local file path will not work for other devices.
-- AR support depends on device, browser, model format, camera permissions, and HTTPS hosting.
+### Add models to the live GitHub Pages website
+1. Create an `assets` folder in this project.
+2. Add properly licensed model files such as `burger.glb`, `pizza.glb`, `pasta.glb`, etc.
+3. In `script.js`, uncomment/edit the `hostedFoodModels` map to point to those files, e.g. `burger: 'assets/burger.glb'`.
+4. Commit and push the files to GitHub. Keep model file sizes reasonable for mobile users and ensure any external model assets are licensed for your use.
 
-## Files
-- `index.html` — website content
-- `styles.css` — responsive design and neon styling
-- `script.js` — menu, QR code, email contact, and interactions
+A `.jpg` or `.png` photo cannot become a true 3D model just by adding it to this viewer. To create true 3D, obtain a 3D scan/model (GLB/GLTF) or a series of photos for a separate multi-view photo-spin implementation.
+
+## Publish on GitHub Pages
+Upload/replace `index.html`, `styles.css`, `script.js`, and `README.md` in your repository. GitHub Pages serves the static site; no backend is required. QR generation and model-viewer load external libraries, so those features need internet access.
+
+## Contact
+WhatsApp: 0319 4249341 (`+92 319 4249341`)
+Location: Satiana Road, Saleemi Chowk, Near Punjab Lab
+Slogan: **MORE CHEESE. MORE HAPPINESS.**
