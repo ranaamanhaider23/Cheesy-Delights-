@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a12">
+  <meta name="description" content="ChessyDelights combines immersive AR and digital marketing with delicious food, burgers, pasta, and restaurant deals.">
+  <title>ChessyDelights — Digital Experiences & Food</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Your Brand home"><span class="brand-mark">A<span>R</span></span><span class="brand-name">Chessy<span>Delights</span></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#work">Our work</a><a href="#services">Services</a><a href="#studio">3D / AR Studio</a><a href="#contact" class="nav-cta">Let's talk <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> DIGITAL INNOVATION · GREAT FOOD</div>
+        <h1>Make your brand<br>feel <span class="gradient-text">real.</span></h1>
+        <p class="hero-lede">From immersive 3D and augmented reality to delicious food deals, ChessyDelights brings creative ideas and memorable flavours together.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#agency">Explore our agency <span>↘</span></a><a class="text-link" href="#food">Explore food deals <span>↗</span></a></div>
+        <div class="hero-proof"><div class="proof-avatars"><i>3D</i><i>AR</i><i>↗</i></div><p><strong>Built for what's next</strong><br><span>Ideas brought to life in 3D</span></p></div>
+      </div>
+      <div class="hero-art" aria-label="Abstract 3D neon orb illustration">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="orb"><div class="orb-core"></div><span class="orb-glint"></span></div>
+        <div class="float-tag tag-top"><span class="tag-dot"></span> Immersive by design</div>
+        <div class="float-tag tag-bottom"><span class="mini-cube">◇</span> 3D + AR experiences</div>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>01 / 04</span></div>
+    </section>
+
+    <section class="logo-strip"><span>DESIGNING THE FUTURE WITH</span><div>PRODUCTS</div><div>EXPERIENCES</div><div>STORIES</div><div>BRANDS</div></section>
+
+    <section class="section-wrap section-pad" id="services">
+      <div class="section-heading"><div><p class="eyebrow">WHAT WE DO</p><h2>Beyond the <span class="gradient-text">ordinary.</span></h2></div><p class="section-intro">From the first scroll to the final interaction, we create digital moments people remember.</p></div>
+      <div class="service-grid">
+        <article class="service-card"><div class="service-icon">◈</div><span class="card-index">01 / EXPERIENCE</span><h3>AR experiences</h3><p>Bring products into the real world through browser-based augmented reality and QR-powered launches.</p><a href="#contact">Build an AR experience <span>↗</span></a></article>
+        <article class="service-card"><div class="service-icon">⬡</div><span class="card-index">02 / PRODUCT</span><h3>3D product visuals</h3><p>Interactive 3D product viewers, virtual showrooms, and beautiful product storytelling.</p><a href="#studio">Try the 3D viewer <span>↗</span></a></article>
+        <article class="service-card"><div class="service-icon">✳</div><span class="card-index">03 / GROWTH</span><h3>Digital campaigns</h3><p>Creative campaign concepts, social content, landing pages, and conversion-focused experiences.</p><a href="#contact">Plan a campaign <span>↗</span></a></article>
+      </div>
+    </section>
+
+    <section class="work-section section-pad" id="work"><div class="section-wrap">
+      <div class="section-heading"><div><p class="eyebrow">SELECTED CONCEPTS</p><h2>Small screen.<br><span class="gradient-text">Big impact.</span></h2></div><p class="section-intro">A few ways we can help your product stand out. These are sample concept cards—replace them with your real projects.</p></div>
+      <div class="work-grid">
+        <article class="work-card work-large"><div class="work-visual visual-sneaker"><div class="visual-ring"></div><div class="sneaker-shape">✧</div><span class="visual-label">01 — PRODUCT AR</span></div><div class="work-meta"><div><h3>Product in your space</h3><p>Augmented reality · E-commerce</p></div><span class="round-arrow">↗</span></div></article>
+        <article class="work-card"><div class="work-visual visual-cosmetic"><div class="bottle"></div><span class="visual-label">02 — 3D SHOWCASE</span></div><div class="work-meta"><div><h3>Made to be explored</h3><p>3D product · Brand story</p></div><span class="round-arrow">↗</span></div></article>
+        <article class="work-card"><div class="work-visual visual-campaign"><div class="campaign-orb"></div><span class="visual-label">03 — DIGITAL CAMPAIGN</span></div><div class="work-meta"><div><h3>Future-facing launch</h3><p>Creative · Digital campaign</p></div><span class="round-arrow">↗</span></div></article>
+      </div>
+    </div></section>
+
+    <section class="section-wrap section-pad studio-section" id="studio">
+      <div class="section-heading"><div><p class="eyebrow">INTERACTIVE STUDIO</p><h2>Meet your product<br><span class="gradient-text">in 3D.</span></h2></div><p class="section-intro">Rotate the model, open it in AR on a supported phone, or create a QR code that links to this page.</p></div>
+      <div class="studio-panel">
+        <div class="viewer-wrap">
+          <div class="viewer-topline"><span><i class="live-dot"></i> LIVE 3D VIEWER</span><span>DRAG TO ROTATE</span></div>
+          <model-viewer id="productViewer" src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz" alt="A 3D astronaut model" camera-controls auto-rotate shadow-intensity="1" exposure="1" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" poster="" loading="eager">
+            <button slot="ar-button" class="ar-button">⌖ View in your space</button>
+            <div slot="progress-bar" class="progress-bar"><div class="progress-fill"></div></div>
+          </model-viewer>
+          <div class="viewer-caption"><span>DEMO MODEL / ASTRONAUT</span><span>GLB · USDZ</span></div>
+        </div>
+        <div class="studio-controls">
+          <span class="card-index">YOUR DIGITAL SHOWROOM</span><h3>Make it interactive.</h3><p>Let visitors inspect a product from every angle. On supported devices, tap “View in your space” to launch AR.</p>
+          <div class="feature-line"><span class="feature-check">✓</span><div><strong>Rotate & inspect</strong><small>Touch, drag, and zoom around the model.</small></div></div>
+          <div class="feature-line"><span class="feature-check">✓</span><div><strong>Try AR on mobile</strong><small>Requires a compatible device and browser.</small></div></div>
+          <div class="qr-box"><div><strong>Share with a QR code</strong><small>Scan to open this experience on another device.</small></div><button id="makeQr" class="button button-secondary">Generate QR ↗</button></div>
+          <div class="qr-output" id="qrOutput" hidden><div id="qrcode"></div><div><strong>Ready to share</strong><small>For best results, use the published HTTPS website URL.</small><button id="downloadQr" class="small-link">Download QR image ↓</button></div></div>
+          <p class="tiny-note">Demo uses a public sample 3D model. Replace it with your own optimized GLB/USDZ files before launch.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section"><div class="section-wrap cta-inner"><div><p class="eyebrow">HAVE A BIG IDEA?</p><h2>Let's make it<br><span class="gradient-text">impossible to ignore.</span></h2></div><a href="#contact" class="button button-primary">Start a project <span>↗</span></a><div class="cta-glow"></div></div></section>
+
+    <section class="section-wrap section-pad contact-section" id="contact">
+      <div class="section-heading"><div><p class="eyebrow">CONTACT THE STUDIO</p><h2>Let's build<br><span class="gradient-text">what's next.</span></h2></div><p class="section-intro">Tell us a little about your project. This demo form opens your email app; connect a form backend to receive submissions online.</p></div>
+      <div class="contact-layout"><div class="contact-aside"><div class="contact-orb">↗</div><h3>Have a project in mind?</h3><p>Share your goal, product, or campaign idea and let's explore what's possible.</p><div class="contact-detail"><span>EMAIL</span><a id="emailLink" href="mailto:hello@example.com">hello@example.com</a></div><div class="contact-detail"><span>WHATSAPP ORDERS & ENQUIRIES</span><a id="whatsappLink" href="https://wa.me/923184789902">0318 4789902 ↗</a></div><div class="contact-detail"><span>FOLLOW THE JOURNEY</span><a href="#work">Explore our concepts ↗</a></div></div>
+        <form id="contactForm" class="contact-form">
+          <label>Your name<input name="name" required placeholder="Full name" autocomplete="name"></label>
+          <label>Email address<input name="email" type="email" required placeholder="you@company.com" autocomplete="email"></label>
+          <label>What are you interested in?<select name="service" required><option value="">Choose a service</option><option>Augmented reality experience</option><option>3D product viewer</option><option>Digital marketing campaign</option><option>Website / landing page</option><option>Something else</option></select></label>
+          <label>Tell us about your project<textarea name="message" rows="4" required placeholder="A little about your idea, timeline, and goals..."></textarea></label>
+          <button type="submit" class="button button-primary submit-button">Prepare email <span>↗</span></button><p id="formStatus" class="form-status" role="status">No backend is connected yet. Update the email address in script.js before publishing.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="#home"><span class="brand-mark">A<span>R</span></span><span class="brand-name">Chessy<span>Delights</span></span></a><p>Creative digital experiences and delicious food, all in one place.</p><div><a href="#agency">Digital Agency</a><a href="#food">Food Menu</a><a href="#work">Work</a><a href="#contact">Contact</a></div><small>© <span id="year"></span> ChessyDelights. Replace demo details before launch.</small></footer>
+</body>
+</html>
